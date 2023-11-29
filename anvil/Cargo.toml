@@ -18,6 +18,7 @@ vergen = { version = "8", default-features = false, features = ["build", "git", 
 # foundry internal
 foundry-evm = { path = "../evm" }
 anvil-core = { path = "core", features = ["fastrlp", "serde", "impersonated-tx"] }
+#anvil-core = { git = "https://github.com/ak0xy/foundry-aug-2", branch = "aug2", path = "anvil/core", features = ["fastrlp", "serde", "impersonated-tx"] }
 anvil-rpc = { path = "rpc" }
 anvil-server = { path = "server" }
 foundry-utils = { path = "../utils" }
@@ -27,7 +28,7 @@ foundry-config = { path = "../config" }
 
 # evm support
 bytes = "1.4.0"
-ethers = { workspace = true, features = ["rustls", "ws", "ipc"] }
+ethers = { version="2.0.7", workspace = true, features = ["rustls", "ws", "ipc"] }
 trie-db = { version = "0.23" }
 hash-db = { version = "0.15" }
 memory-db = { version = "0.29" }
